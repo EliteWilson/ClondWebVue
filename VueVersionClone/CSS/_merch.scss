@@ -1,0 +1,74 @@
+@media (min-width: 0px) {
+    .newItem {
+        overflow-x: hidden;
+    }
+    .merch_card {
+        position: relative;
+        width: 40vw;
+        border-radius: 10px;
+        background-color: white;
+        font-size: 15px;
+        line-height: 1.5;
+        margin: 5px;
+        text-align: center;
+        img {
+            border-radius: 15px;
+        }
+        #price {
+            text-align: right;
+        }
+    }
+    .ifSoldOut {
+        top: 0;
+        left: 0;
+        position: absolute;
+        font-size: 12px;
+        line-height: 32px;
+        color: white;
+        text-align: center;
+        background-color: black;
+        width: 38px;
+        height: 32px;
+        border-radius: 15px 0 15px 0;
+    }
+    .checkMore {
+        font-size: 18px;
+        text-align: center;
+        line-height: 50px;
+        width: 200px;
+        height: 50px;
+        border-radius: 50px;
+        background-color: #2F9AE0;
+        color: white;
+        margin: 20px auto auto auto;
+    }
+    // recommand
+    #recommand {
+        background-color: transparent;
+    }
+}
+
+// 平板到筆電
+@media (min-width: 576px) {
+    .merch_card {
+        width: 22vw;
+        margin: 8px;
+    }
+    .ifSoldOut {
+        width: 42px;
+        font-size: 14px;
+    }
+}
+
+// 桌機
+@media (min-width: 992px) {
+    .merch_card {
+        margin: 10px;
+        min-width: 280px!important;
+        width: 19vw;
+    }
+    .ifSoldOut {
+        width: 48px;
+        font-size: 14px;
+    }
+}

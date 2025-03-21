@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue版-仿製-Chiikawa市場官方商品商店</title>
+    <!-- CDN-CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="stylesheet" href="CSS/index.css">
+    <link rel="icon" href="./assets/Vue.js_Logo_2.svg.png" type="image/x-icon">
+    <!-- JS -->
+    <script src="./JS/newItems.js" type="module"></script>
+    <script src="./JS/recommand.js" type="module"></script>
+    <script src="./JS/navPOP.js" type="module"></script>
+
+</head>
+
+<body>
+    <div id="container">
+        <div id="header__announcement">
+            e禮物，通過Line或電子郵件提供禮物
+            <div id="delivery">
+                <img src="./assets/delivery.jpg" class="img-fluid" alt="deliveryIcon">
+                <p id="delivery_txt">國際配送</p>
+            </div>
+            <div id="chatbot">
+                <img id="chatbot_pc" src="https://chiikawamarket.jp/cdn/shop/files/chatbot_pc2_160x.png?v=14405807558044687449" class="img-fluid" alt="chatbotpc">
+                <img id="chatbot_mobile" src="https://chiikawamarket.jp/cdn/shop/files/chatbot_sp2_100x.png?v=18287643428416850120" alt="chatbot_mobile">
+            </div>
+        </div>
+        <div id="header">
+            <div id="header__burger">
+                <input type="checkbox" id="menu-toggle" title="Menu-Toggle">
+                <label for="menu-toggle">
+                    <i class="fa-solid fa-bars" id="nav-open"></i>
+                </label>
+                <label for="menu-toggle" id="nav-close">
+                    <i class="fa-solid fa-xmark"></i>
+                </label>
+                <div id="nav-blur">
+                </div>
+                <div id="mobile__nav">
+                    <div id="mobile_nav_content">
+                        <p id="nav__greeting">你好!小吉吉</p>
+                        <img src="./assets/welcome_320x.png" alt="welcome" id="greeting_mobile">
+                        <div id="login_mobile">
+                            <span>登入/註冊</span>
+                        </div>
+                        <div id="mobile_search">
+                            <form>
+                                <input type="text" placeholder="搜尋商品">
+                                <button type="submit" aria-label="search" id="search_button">
+                                <i class="fa-solid fa-magnifying-glass" ></i>
+                                </button>
+                            </form>
+                        </div>
+                        <div id="mobile_menu">
+                            <details>
+                                <summary>新商品</summary>
+                                <ul>
+                                    <li>
+                                        <a href="#">
+                                            <p>新商品列表</p>
+                                        </a>
+                                    </li>
+                                    <a href="#">
+                                        <li>
+                                            <p>2月28日發售商品</p>
+                                        </li>
+                                    </a>
+                                    <li>
+                                        <p>2月26日發售商品</p>
+                                    </li>
+                                    <li>
+                                        <p>2月21日發售商品</p>
+                                    </li>
+                                    <li>
+                                        <p>2月14日發售商品</p>
+                                    </li>
+                                    <li>
+                                        <p>2月7日發售商品</p>
+                                    </li>
+                                </ul>
+                            </details>
+                            <details>
+                                <summary>重新上貨商品</summary>
+                                <ul>
+                                    <li>
+                                        <p>補貨產品列表</p>
+                                    </li>
+                                    <li>
+                                        <p>2月27日重新上貨商品</p>
+                                    </li>
+                                    <li>
+                                        <p>2月20日重新上貨商品</p>
+                                    </li>
+                                    <li>
+                                        <p>2月13日重新上貨商品</p>
+                                    </li>
+                                </ul>
+                            </details>
+                        </div>
+                        <a><img src="./assets/kuji_bnr_03.png" alt="marketIMG" style="width: 230px; margin-top: 20px;"></a>
+                        <div id="mobile__nav__footer">
+                            <a href="#">
+                                <p>用戶指南</p>
+                            </a>
+                            <a href="#">
+                                <p>FAQ</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p id="header__greeting">你好!小吉吉</p>
+            <div id="header__logo"><img src="./assets/logo_chiikawamarket_300x.png" alt="logo"></div>
+            <!-- <div id="nothingButaBlock"></div> -->
+            <div id="header__right">
+                <div id="header__kuji"><img src="./assets/kuji_icon_02_150x.png" alt="cart"></div>
+                <div id="header__login"><img src="./assets/en_btn_login_112x.png" alt="cart"></div>
+                <div id="header__cart"><img src="./assets/en_btn_cart_112x.png" alt="cart"></div>
+            </div>
+        </div>
+        <div id="nav">
+            <div id="popBlock">
+                <div id="popContainer" class=" d-flex justify-content-center align-items-center">
+                    <div class="row text-center py-3" id="popInner">
+                        <div class="col-12 fs-5 mb-2 fw-bold p-2" id="pop_Title">新商品</div>
+                        <p class="col-5 fs-6 ms-3 my-2">內容標題內容標題</p>
+                        <p class="col-5 fs-6 ms-3 my-2">內容標題內容標題</p>
+                    </div>
+                </div>
+            </div>
+            <div id="nav__welcome">
+                <img src="./assets/welcome_320x.png" alt="welcome">
+            </div>
+            <div id="nav__menu">
+                <ul>
+                    <li id="New">新商品</li>
+                    <li id="Restocked">重新上貨商品</li>
+                    <li id="Character">角色</li>
+                    <li id="Series">系列</li>
+                    <li id="Category">分類</li>
+                    <li>用戶指南</li>
+                </ul>
+            </div>
+            <div id="nav__search">
+                <form>
+                    <input type="text" placeholder="搜尋商品">
+                    <button type="submit" aria-label="search">
+                    <i class="fa-solid fa-magnifying-glass" ></i>
+                </button>
+                </form>
+            </div>
+        </div>
+
+        <div id="web__content">
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="./assets/bnr_20240404_571x.jpg" alt="img1"></div>
+                    <div class="swiper-slide"><img src="./assets/bnr_20240927_571x.jpg" alt="img2"></div>
+                    <div class="swiper-slide"><img src="./assets/bnr_241025_571x.jpg" alt="img3"></div>
+                    <div class="swiper-slide"><img src="./assets/bnr_241029_571x.jpg" alt="img4"></div>
+                    <div class="swiper-slide"><img src="./assets/bnr_241122_571x.jpg" alt="img5"></div>
+                    <div class="swiper-slide"><img src="./assets/bnr_241226_571x.jpg" alt="img6"></div>
+                    <div class="swiper-slide"><img src="./assets/bnr_buta_20240319_7ac4902b-4c8f-48b3-8b08-4380878bd5eb_571x.jpg" alt="img7"></div>
+                    <div class="swiper-slide"><img src="./assets/ck_restaurant_bn1200_571x.jpg" alt="img8"></div>
+                    <div class="swiper-slide"><img src="./assets/cksushi_nui01_bnr_571x.jpg" alt="img9"></div>
+                    <div class="swiper-slide"><img src="./assets/originalbox_1200bn_571x.jpg" alt="img10"></div>
+                    <div class="swiper-slide"><img src="./assets/lineid_sp_231102_571x.png" alt="img11"></div>
+                    <div class="swiper-slide"><img src="./assets/1040banner05_571x.png" alt="img12"></div>
+                </div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+            <div id="second_part-BSTP" class="container">
+                <div class="top row d-flex justify-content-center align-items-center">
+                    <div class="col-5 col-md-3 py-2 px-2 px-md-2 px-lg-1 d-flex justify-content-center align-items-center"><img src="https://chiikawamarket.jp/cdn/shop/files/guide_regist2_288x.png?v=14768333802497796580" class="img-fluid" alt="img1">
+                    </div>
+                    <div class="col-5 col-md-3 py-2 px-2 px-md-2 px-lg-1 d-flex justify-content-center align-items-center"><img src="https://chiikawamarket.jp/cdn/shop/files/guide_guide2_288x.png?v=10751060687499153566" class="img-fluid" alt="img2">
+                    </div>
+                    <div class="col-5 col-md-3 py-2 px-2 px-md-2 px-lg-1 d-flex justify-content-center align-items-center"><img src="https://chiikawamarket.jp/cdn/shop/files/guide_faq2_288x.png?v=12501554787265540417" class="img-fluid" alt="img3">
+                    </div>
+                    <div class="col-5 col-md-3 py-2 px-2 px-md-2 px-lg-1 d-flex justify-content-center align-items-center"><img src="https://chiikawamarket.jp/cdn/shop/files/guide_info3_288x.png?v=8631580389292775388" class="img-fluid" alt="img4">
+                    </div>
+                    <div class="row d-flex justify-content-center align-items-center py-3">
+                        <img src="https://chiikawamarket.jp/cdn/shop/files/kuji_bnr_11_1280x.png?v=378091552277575605" alt="" class="img-fluid col-12 col-md-8 col-lg-6">
+                    </div>
+                </div>
+            </div>
+            <div class="newItem py-4 pb-5">
+                <div class="row d-flex text-center fw-bold py-2">
+                    <h2 class="fs-4 py-2">新商品</h2>
+                    <h2 class="fs-2 mb-4">NEW ITEMS</h2>
+                </div>
+                <!-- merchs -->
+                <div id="newItem_merch" class="container">
+                    <div class="row justify-content-center align-items-center">
+                        <!-- <div class="merch_card">
+                            <a href="#"><img src="./assets/merchs/merch1.jpg " class="img-fluid " alt="merchcard ">
+                                <p>吉伊卡哇 Love Liner 液體眼線筆 R4 (吉伊卡哇 - 玫瑰棕)</p>
+                            </a>
+                            <p id="price">NT950$</p>
+                            <div class="ifSoldOut">售罄</div>
+                        </div> -->
+                        <!-- 此處將用js生成 -->
+                    </div>
+                </div>
+                <a href="#">
+                    <div class="checkMore">查看更多</div>
+                </a>
+            </div>
+
+        </div>
+        <!-- recommand -->
+        <!-- 我偷懶 直接複製貼上 -->
+        <div class="newItem py-4 pb-5" id="recommand">
+            <div class="row d-flex text-center fw-bold py-2">
+                <h2 class="fs-4 py-2">推薦商品</h2>
+                <h2 class="fs-2 mb-4">RECOMMAND ITEMS</h2>
+            </div>
+            <!-- merchs -->
+            <div id="newItem_merch" class="container">
+                <div class="row justify-content-center align-items-center">
+                    <div class="merch_card">
+                        <a href="#"><img src="./assets/merchs/merch16.jpg " class="img-fluid " alt="merchcard ">
+                            <p>商品內文測試元件A1</p>
+                        </a>
+                        <p id="price">NT950$</p>
+                        <div class="ifSoldOut">售罄</div>
+                    </div>
+                    <!-- 此處將用js生成 -->
+                </div>
+            </div>
+            <a href="#">
+                <div class="checkMore">查看更多</div>
+            </a>
+        </div>
+        <!-- checkedItem -->
+        <!-- 我又偷懶 直接複製貼上 -->
+        <div class="newItem py-4 pb-5" id="checked">
+            <div class="row d-flex text-center fw-bold py-2">
+                <h2 class="fs-4 py-2">最近看過</h2>
+                <h2 class="fs-2 mb-4">CHECKED ITEMS</h2>
+            </div>
+            <!-- merchs -->
+            <div id="newItem_merch" class="container">
+                <div class="row justify-content-center align-items-center">
+                </div>
+            </div>
+        </div>
+        <!-- 公告 -->
+        <div id="marketAnnouce" class="p-3 container-fluid d-flex justify-content-center align-items-center">
+            <div class="board text-center mt-5">
+                <h3 class="pb-3 fw-bold">吉伊卡哇市場通知</h3>
+                <div class="content">
+                    <p class="date">2025年2月18日</p>
+                    <p>介紹AU付款的通知</p>
+                </div>
+                <div class="content">
+                    <p class="date">2025年2月15日</p>
+                    <p>有關線付費服務終止和系統維護的通知</p>
+                </div>
+                <div class="content">
+                    <p class="date">2025年2月13日</p>
+                    <p>部分地区因大雪停运延误通知</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="footer_gif">
+            <img class="img-fluid" src="https://chiikawamarket.jp/cdn/shop/files/footer-chiikawa.gif?v=12524640296011371818" alt="gif">
+        </div>
+        <div id="footer_contact" class="my-2"><img src=" https://chiikawamarket.jp/cdn/shop/files/en_btn_contact.png?v=16770436216302825080" alt="img"></div>
+        <div id="footer_menu">
+            <div id="footer_menu_mobile">
+                <ul>
+                    <li>服務條款</li>
+                    <li>隱私政策</li>
+                    <li>基於特定商業交易法的記載</li>
+                    <li>公司簡介</li>
+                    <li>用法指南</li>
+                    <li>FAQ</li>
+                    <li>詢問</li>
+                    <li>OEM諮詢</li>
+                    <li></li>
+                </ul>
+            </div>
+            <div id="footer_menu_pc" class="my-4">
+                <ul>
+                    <li>服務條款</li>
+                    <li>隱私政策</li>
+                    <li>基於特定商業交易法的記載</li>
+                    <li>公司簡介</li>
+                    <li>用法指南</li>
+                    <li>FAQ</li>
+                    <li>詢問</li>
+                    <li>OEM諮詢</li>
+                </ul>
+            </div>
+            <div id="footer_sns" class="d-flex justify-content-center align-items-center gap-3 gap-md-4">
+                <img src="https://chiikawamarket.jp/cdn/shop/files/sns_x_black.png?v=10349592065571953106" alt="">
+                <img src="https://chiikawamarket.jp/cdn/shop/files/sns_instagram.png?v=13193121673100783803" alt="">
+                <img src="https://chiikawamarket.jp/cdn/shop/files/sns_line.png?v=14303247551882539813" alt="">
+            </div>
+            <div id="footer_copyright" class="text-center mt-4 mb-1">
+                <p>©nagano　©nagano / chiikawa committee　©Gray Parka Service</p>
+            </div>
+    </footer>
+    </div>
+
+
+    <!-- js-cdn -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js "></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js "></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js "></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js "></script>
+    <!-- js-cdn -->
+    <script src="./JS/swiper-init.js"></script>
+    <script src="./JS/navSeries.js" type="module"></script>
+    <script src="./JS/alertToast.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,200 @@
+// 手機
+@media (min-width:0px) {
+    #header,
+    #header__announcement,
+    #nav {
+        z-index: 999999999;
+    }
+    #header__announcement {
+        height: 40px;
+        line-height: 40px;
+        background-color: hsl(357, 71%, 68%);
+        color: white;
+        text-align: center;
+        // 測試用
+        // position: relative;
+    }
+    #header {
+        height: 70px;
+        position: sticky;
+        top: 0;
+        background-color: #FFC2CA;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    #header__logo {
+        align-items: center;
+        img {
+            max-width: 100%;
+            height: 55px;
+        }
+    }
+    #header__right {
+        display: flex;
+        align-items: center;
+         :not(:last-child) {
+            display: none;
+        }
+    }
+    #header__kuji img {
+        max-width: 100%;
+        margin-right: 5px;
+        height: 50px;
+        width: 70px;
+        justify-content: flex-end;
+    }
+    #header__login img {
+        max-width: 100%;
+        margin-right: 5px;
+        height: 45px;
+        width: 45px;
+        justify-content: flex-end;
+    }
+    #header__cart img {
+        max-width: 100%;
+        margin-right: 15px;
+        height: 45px;
+        width: 45px;
+        justify-content: flex-end;
+    }
+    #header__burger {
+        margin-left: 15px;
+        #nav-open {
+            justify-content: flex-start;
+            font-size: 30px;
+        }
+    }
+    #header__greeting {
+        display: none;
+    }
+    #nav {
+        position: sticky;
+        top: 100px;
+        display: none;
+    }
+}
+
+// 平板
+@media (min-width: 768px) {
+    #header {
+        height: 100px;
+    }
+    #header__logo img {
+        height: 75px;
+    }
+    #header__burger {
+        display: none;
+    }
+    #header__greeting {
+        margin-left: clamp(5px, 4vw, 50px);
+        margin-top: -30px;
+        font-size: 14px;
+        width: 190px;
+        padding: 5px 5px;
+        border-radius: 50px;
+        border: 1px solid black;
+        background-color: white;
+        text-align: center;
+        display: block;
+    }
+    #header__right {
+        display: flex;
+        padding-right: 5vw;
+        img {
+            scale: 1.1;
+        }
+        display: flex;
+        align-items: center;
+         :not(:last-child) {
+            display: block;
+            padding-right: 10px;
+        }
+    }
+    #nav {
+        height: 45px;
+        background-color: #FFFBBF;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        ul {
+            display: flex;
+            li {
+                padding-right: 10px;
+            }
+             :not(:nth-last-child(-n+3)):after {
+                content: '|';
+                padding-left: 10px;
+                color: #000000;
+            }
+             :nth-last-child(-n+2) {
+                display: none;
+            }
+        }
+    }
+    #nav__welcome {
+        img {
+            margin-left: clamp(50px, 5vw, 60px);
+            margin-top: -50px;
+            height: 85px;
+            width: 160px;
+        }
+    }
+    #nav {
+        #nav__search {
+            margin-right: 5vw;
+            width: 200px;
+            position: relative;
+        }
+        form {
+            input {
+                border: none;
+                border-bottom: 1px solid black;
+                background-color: #FFFBBF;
+                outline: none;
+            }
+        }
+        button {
+            top: 0;
+            left: 200px;
+            margin-left: -30px;
+            position: absolute;
+            background-color: #FFFBBF;
+            border: none;
+        }
+    }
+}
+
+// 桌機
+@media (min-width: 992px) {
+    #header__right {
+        img {
+            scale: 1.2;
+        }
+    }
+    // #nav {
+    //     ul {
+    //         :not(:last-child):after {
+    //             content: '|';
+    //             padding-left: 10px;
+    //             color: #000000;
+    //         }
+    //          :nth-last-child(-n+2) {
+    //             display: block;
+    //         }
+    //     }
+    // }
+    #nav {
+        ul li {
+            &:not(:last-child)::after {
+                content: '|';
+                padding-left: 10px;
+                color: #000000;
+            }
+            &:nth-last-child(-n+2) {
+                display: block;
+            }
+        }
+    }
+}

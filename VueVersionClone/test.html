@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hover 顯示內容</title>
+    <!-- 引入 Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* 設定 hover 顯示區塊的樣式 */
+        
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            z-index: 1000;
+        }
+        
+        .nav-item:hover .dropdown-menu {
+            display: block;
+        }
+        
+        .dropdown-item {
+            padding: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- 導覽列 -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        新商品
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#" data-content="new_items">新商品列表</a>
+                        <a class="dropdown-item" href="#" data-content="march_8">3月8日發售商品</a>
+                        <a class="dropdown-item" href="#" data-content="feb_28">2月28日發售商品</a>
+                        <a class="dropdown-item" href="#" data-content="feb_26">2月26日發售商品</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        補貨產品
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown2">
+                        <a class="dropdown-item" href="#" data-content="march_6">3月6日重新上貨商品</a>
+                        <a class="dropdown-item" href="#" data-content="feb_27">2月27日重新上貨商品</a>
+                        <a class="dropdown-item" href="#" data-content="feb_20">2月20日重新上貨商品</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown3" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        角色
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown3">
+                        <a class="dropdown-item" href="#" data-content="character_1">吉伊卡哇</a>
+                        <a class="dropdown-item" href="#" data-content="character_2">烏薩奇</a>
+                        <a class="dropdown-item" href="#" data-content="character_3">小八</a>
+                        <a class="dropdown-item" href="#" data-content="character_4">小桃</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 顯示區塊 -->
+    <div id="contentDisplay" class="container mt-5">
+        <h4>選擇的內容將顯示在這裡</h4>
+        <p id="contentText">請從導航列選擇主題。</p>
+    </div>
+
+    <!-- 引入 jQuery 和 Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- 自訂 JavaScript -->
+    <script>
+        // 模擬從陣列提取的內容
+        const contentData = {
+            new_items: "這是新商品列表的內容。",
+            march_8: "這是3月8日發售商品的內容。",
+            feb_28: "這是2月28日發售商品的內容。",
+            feb_26: "這是2月26日發售商品的內容。",
+            march_6: "這是3月6日重新上貨商品的內容。",
+            feb_27: "這是2月27日重新上貨商品的內容。",
+            feb_20: "這是2月20日重新上貨商品的內容。",
+            character_1: "吉伊卡哇的詳細資訊。",
+            character_2: "烏薩奇的詳細資訊。",
+            character_3: "小八的詳細資訊。",
+            character_4: "小桃的詳細資訊。",
+        };
+        // 當使用者選擇一個項目時，顯示相應的內容
+        $(document).ready(function() {
+            $(".dropdown-item").on("click", function(e) {
+                e.preventDefault();
+                const contentKey = $(this).data("content");
+                const content = contentData[contentKey];
+                $("#contentText").text(content);
+            });
+        });
+    </script>
+
+</body>
+
+</html>

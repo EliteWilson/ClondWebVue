@@ -1,0 +1,17 @@
+@media (max-width: 575.98px) {}
+
+// 平板到筆電
+@media (min-width: 576px) and (max-width: 991px) {}
+
+// 桌機
+@media (min-width: 992px) {}
+
+..../
+
+@media (min-width: 0px) {}
+
+// 平板到筆電
+@media (min-width: 576px) {}
+
+// 桌機
+@media (min-width: 992px) {}

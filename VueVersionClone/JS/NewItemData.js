@@ -1,0 +1,18 @@
+export const NewItemData = [
+    { id: "1", url: "./assets/merchs/merch1.jpg", txt: "商品內文及產品介紹", price: "NT$ 550", instock: true },
+    { id: "2", url: "./assets/merchs/merch2.jpg", txt: "商品內文及產品介紹", price: "NT$ 500", instock: true },
+    { id: "3", url: "./assets/merchs/merch3.jpg", txt: "商品內文及產品介紹", price: "NT$ 950", instock: true },
+    { id: "4", url: "./assets/merchs/merch4.jpg", txt: "商品內文及產品介紹", price: "NT$ 500", instock: true },
+    { id: "5", url: "./assets/merchs/merch5.jpg", txt: "商品內文及產品介紹", price: "NT$ 550", instock: false },
+    { id: "6", url: "./assets/merchs/merch6.jpg", txt: "商品內文及產品介紹", price: "NT$ 950", instock: true },
+    { id: "7", url: "./assets/merchs/merch7.jpg", txt: "商品內文及產品介紹", price: "NT$ 550", instock: true },
+    { id: "8", url: "./assets/merchs/merch8.jpg", txt: "商品內文及產品介紹", price: "NT$ 500", instock: false },
+    { id: "9", url: "./assets/merchs/merch9.jpg", txt: "商品內文及產品介紹", price: "NT$ 950", instock: true },
+    { id: "10", url: "./assets/merchs/merch10.jpg", txt: "商品內文及產品介紹", price: "NT$ 550", instock: true },
+    { id: "11", url: "./assets/merchs/merch11.jpg", txt: "商品內文及產品介紹", price: "NT$ 500", instock: false },
+    { id: "12", url: "./assets/merchs/merch12.jpg", txt: "商品內文及產品介紹", price: "NT$ 950", instock: true },
+    { id: "13", url: "./assets/merchs/merch13.jpg", txt: "商品內文及產品介紹", price: "NT$ 500", instock: true },
+    { id: "14", url: "./assets/merchs/merch14.jpg", txt: "商品內文及產品介紹", price: "NT$ 550", instock: false },
+    { id: "15", url: "./assets/merchs/merch15.jpg", txt: "商品內文及產品介紹", price: "NT$ 950", instock: true },
+    { id: "16", url: "./assets/merchs/merch16.jpg", txt: "商品內文及產品介紹", price: "NT$ 550", instock: true },
+];

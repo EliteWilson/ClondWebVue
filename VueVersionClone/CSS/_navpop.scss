@@ -1,0 +1,37 @@
+@media (min-width: 0px) {
+    #popBlock {
+        top: 45px;
+        left: calc((100vw - 500px) / 2);
+        width: 500px;
+        padding: 15px;
+        height: auto;
+        z-index: 2;
+        background-color: #fdf9c6;
+        position: absolute;
+        display: none;
+        border-radius: 0 0 15px 15px;
+        #popContainer {
+            background-color: rgb(255, 255, 255);
+            border: 1px solid black;
+            border-radius: 15px;
+            p:hover {
+                color: rgb(0, 157, 255);
+            }
+        }
+    }
+}
+
+// 平板到筆電
+@media (min-width: 576px) {}
+
+// 特別版本
+@media (min-width: 768px) {}
+
+// 桌機
+@media (min-width: 992px) {
+    #popBlock {
+        left: calc((100vw - 700px) / 2);
+        width: 700px;
+        position: absolute;
+    }
+}
